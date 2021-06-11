@@ -10,7 +10,7 @@ const path = require('path');
 module.exports = (app) => {
     // console.log("API routes get request");
     // "/api/notes" 
-    app.get('/notes', (req, res) => {
+    app.get('/api/notes', (req, res) => {
         // console.log("All notes in file ", notesHTML);
         fs.readFile('./db/db.json', "utf8", (error, response) => {
 
