@@ -1,11 +1,10 @@
-var express = require('express')
+// var express = require('express')
 // var app = express()
 // var notesHTML = require('./htmlRoutes')
 // const { response } = require('express');
-const fs = require('fs');
 // const path = require('path');
-
 // const notesHTML = require('../db/db.json');
+const fs = require('fs');
 
 module.exports = (app) => {
     // console.log("API routes get request");
@@ -23,27 +22,37 @@ module.exports = (app) => {
             res.json(exisitingNotes);
             console.log("API routes get request");
 
-
         });
+
+        // app.post('/notes', (req, res) => {
+        //     console.log("New note", req.body)
+        //     JSON.parse(response);
+        //     const reqBody = req.body;
+        //     fs.writeFile(notesHTML)
+        // res.send('hello notes')
+        //read JSON 
+        // create anew variable req.body 
+        // fs.writeFile()
+
+        // const postNote =  fs.readFile('./db/db.json')
+        // })
+
     });
+
+};
+
+
+
+
+
+
+
+
+
+
+
 
 
     // app.get('/', function (req, res) {
     //     res.send('hello root')
     // });
-
-    // app.get('/notes', (req, res) => {
-    //     console.log("New note", req.body)
-    //     JSON.parse(response);
-    //     const reqBody = req.body;
-    //     fs.writeFile(notesHTML)
-    // res.send('hello notes')
-    //read JSON 
-    // create anew variable req.body 
-    // fs.writeFile()
-
-    // const postNote =  fs.readFile('./db/db.json')
-    // })
-
-
-};
