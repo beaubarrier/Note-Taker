@@ -16,11 +16,14 @@ module.exports = (app) => {
 
             if (error) { throw error }
 
-            const exisitingNOtes = JSON.parse(response);
-            console.log(exisitingNOtes)
+            const exisitingNotes = JSON.parse(response);
 
-            res.json(exisitingNOtes);
+            console.log(exisitingNotes)
+
+            res.json(exisitingNotes);
             console.log("API routes get request");
+
+
         });
     });
 
