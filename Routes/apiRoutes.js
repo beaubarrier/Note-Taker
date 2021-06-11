@@ -1,6 +1,6 @@
-// var express = require('express')
-// var app = express()
-// var notesHTML = require('./htmlRoutes')
+var express = require('express')
+var app = express()
+var notesHTML = require('./htmlRoutes')
 const { response } = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -10,7 +10,7 @@ const notesHTML = require('../db/db.json');
 module.exports = (app) => {
     // console.log("API routes get request");
     // "/api/notes" 
-    app.get('/api/notes', (req, res) => {
+    app.get('/notes', (req, res) => {
         // console.log("All notes in file ", notesHTML);
         fs.readFile('./db/db.json', "utf8", (error, response) => {
 
@@ -29,7 +29,7 @@ module.exports = (app) => {
     //     res.send('hello root')
     // });
 
-    app.post('/api/notes', (req, res) => {
+    app.get('/notes', (req, res) => {
         console.log("New note", req.body)
         JSON.parse(response);
         const reqBody = req.body;

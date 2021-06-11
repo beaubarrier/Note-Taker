@@ -5,10 +5,11 @@ const path = require('path');
 const fs = require('fs');
 const apiRoutes = require('./Routes/apiRoutes');
 const htmlRoutes = require('./Routes/htmlRoutes');
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
-//settp the rotes 
+
 app.use('/', htmlRoutes);
 app.use('/api', apiRoutes);
 
