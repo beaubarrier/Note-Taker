@@ -1,9 +1,9 @@
 var express = require('express')
-var app = express()
+// var app = express()
 // var notesHTML = require('./htmlRoutes')
 // const { response } = require('express');
 const fs = require('fs');
-const path = require('path');
+// const path = require('path');
 
 // const notesHTML = require('../db/db.json');
 
