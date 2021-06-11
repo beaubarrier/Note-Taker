@@ -1,11 +1,11 @@
 var express = require('express')
 var app = express()
-var notesHTML = require('./htmlRoutes')
-const { response } = require('express');
+// var notesHTML = require('./htmlRoutes')
+// const { response } = require('express');
 const fs = require('fs');
 const path = require('path');
 
-const notesHTML = require('../db/db.json');
+// const notesHTML = require('../db/db.json');
 
 module.exports = (app) => {
     // console.log("API routes get request");
@@ -29,18 +29,18 @@ module.exports = (app) => {
     //     res.send('hello root')
     // });
 
-    app.get('/notes', (req, res) => {
-        console.log("New note", req.body)
-        JSON.parse(response);
-        const reqBody = req.body;
-        fs.writeFile(notesHTML)
-        // res.send('hello notes')
-        //read JSON 
-        // create anew variable req.body 
-        // fs.writeFile()
+    // app.get('/notes', (req, res) => {
+    //     console.log("New note", req.body)
+    //     JSON.parse(response);
+    //     const reqBody = req.body;
+    //     fs.writeFile(notesHTML)
+    // res.send('hello notes')
+    //read JSON 
+    // create anew variable req.body 
+    // fs.writeFile()
 
-        // const postNote =  fs.readFile('./db/db.json')
-    })
+    // const postNote =  fs.readFile('./db/db.json')
+    // })
 
 
 };
