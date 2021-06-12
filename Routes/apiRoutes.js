@@ -6,10 +6,9 @@ const fs = require('fs');
 // all makes 0 sense to me.
 
 module.exports = (app) => {
+    app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'notes.html')));
 
-
-    app.get('/api/notes', (req, res) => res.json(characters));
-    fs.readFile('../../db/db.json')
+    fs.readFile('../../db/db.json');
     // app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')))
     res.send(JSON.parse(data));
     // app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'notes.html')));
