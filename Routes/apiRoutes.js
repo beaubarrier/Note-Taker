@@ -1,8 +1,8 @@
 
 const fs = require('fs');
-// need to import db. need to pull from
-// think pulling from json obj.
-// use fs functions to read and write db.json, readfileasync,
+// need to import db. need to pull from (how do you import)
+// think pulling from json obj. (what does this mean)
+// use fs functions to read and write db.json, readfileasync, (what does that mean)
 // all makes 0 sense to me.
 
 module.exports = (app) => {
