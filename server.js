@@ -1,19 +1,18 @@
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1337;
 const express = require('express');
 const app = express();
-// const cors = require('cors')
-// const path = require('path');
-// const fs = require('fs');
-// const http = require('http');
 
-const apiRoutes = require('./Routes/apiRoutes');
-const htmlRoutes = require('./Routes/htmlRoutes');
 
-// app.use(cors())
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
+
+
+
 
 app.use('/', htmlRoutes);
 app.use('/api', apiRoutes);
