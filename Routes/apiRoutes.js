@@ -1,7 +1,7 @@
 const db = require('../db/db.json');
 const fs = require('fs');
 const path = require('path');
-var uniqid = require('uniqid');
+const uniqid = require('uniqid');
 const dbPath = path.join(__dirname, '../db/db.json');
 
 
