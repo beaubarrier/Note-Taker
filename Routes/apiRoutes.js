@@ -28,8 +28,8 @@ module.exports = (app) => {
         console.log("=====" + req.params.id);
         console.log("++++++" + id);
         const noteDelete = JSON.parse(fs.readFileSync(dbPath));
-        let noteFilter = noteDelete.filter(function (el) {
-            return el.id != id;
+        let noteFilter = noteDelete.filter(function (e) {
+            return e.id != id;
         });
 
         // Why isnt it writing to the html???
