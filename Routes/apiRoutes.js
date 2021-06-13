@@ -34,7 +34,7 @@ module.exports = (app) => {
             return el.id != noteId;
         });
 
-        // Write new array to file?
+        // Why isnt it writing to the html???
         fs.writeFileSync("./db/db.json", JSON.stringify(filteredNotes))
         res.json("Note deleted!")
     })
