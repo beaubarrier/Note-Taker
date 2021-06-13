@@ -12,30 +12,28 @@ module.exports = (app) => {
 
     app.post('/api/notes', (req, res) => {
         var note = req.body;
-
         note.id = uniqid();
         db.push(note);
         res.json(true);
-        console.log(req.params.id)
         fs.writeFileSync("./db/db.json", JSON.stringify(db), err => {
             if (err) {
                 console.error(err)
                 return
             }
         })
-
     });
 
     app.delete('/api/notes/:id', (req, res) => {
-        const noteId = req.params.id;
-        console.log("++++++" + noteId)
-        const noteToDelete = JSON.parse(fs.readFileSync(dbPath));
-        let filteredNotes = noteToDelete.filter(function (el) {
-            return el.id != noteId;
+        const id = req.params.id;
+        console.log("=====" + req.params.id);
+        console.log("++++++" + id);
+        const noteDelete = JSON.parse(fs.readFileSync(dbPath));
+        let noteFilter = noteDelete.filter(function (el) {
+            return el.id != id;
         });
 
         // Why isnt it writing to the html???
-        fs.writeFileSync("./db/db.json", JSON.stringify(filteredNotes))
-        res.json("Note deleted!")
+        fs.writeFileSync("./db/db.json", JSON.stringify(noteFilter));
+        res.json("Note deleted!");
     })
 }
