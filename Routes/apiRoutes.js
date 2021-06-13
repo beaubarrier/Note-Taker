@@ -7,8 +7,15 @@ const dbPath = path.join(__dirname, '../db/db.json');
 
 module.exports = (app) => {
 
-    app.get('/api/notes', (req, res) => res.json(db));
 
+    app.get('/api/notes', (req, res) => {
+        fs.readFile(dbPath, "utf8", (err, data) => {
+            if (err) {
+                throw err;
+            }
+            res.json(JSON.parse(data));
+        });
+    });
 
     app.post('/api/notes', (req, res) => {
         var note = req.body;
@@ -33,6 +40,7 @@ module.exports = (app) => {
         });
 
         // Why isnt it writing to the html???
+
         fs.writeFileSync("./db/db.json", JSON.stringify(noteFilter));
         res.json("Note deleted!");
     })
