@@ -1,24 +1,30 @@
 
+const router = require('express');
 const fs = require('fs');
 // const path = require('path');
 // need to import db. need to pull from 
 const db = require('../db/db.json');
-
+// require('../db/db.json');
 // const notes = require('/notes.html')
 // use fs functions to read and write db.json, readfileasync, (inside or outside of module.exports?)
 // router? 
-console.log(db)
+
+
 module.exports = (app) => {
-    // app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'notes.html')));
     app.get('/api/notes', (req, res) => res.json(db));
-    console.log(res + "res")
-    console.log(req + "req")
-    fs.readFile(db, JSON.stringify(db), err => {
-        if (err) {
-            console.log(err)
-            return
-        }
-    })
+    // why isnt this displaying all notes?
+
+
+
+    // JSON.stringify(db);
+
+    // fs.readFile('../db', db, err => {
+    //     if (err) {
+    //         console.log(err)
+    //         return
+    //     }
+
+    // })
 
     // app.post('/api/notes', (req, res) => {
     //     console.log(req.body);

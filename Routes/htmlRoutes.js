@@ -4,15 +4,15 @@ const path = require('path');
 var express = require("express");
 var app = express();
 
-var router = express.Router();
+// var router = express.Router();
 module.exports = (app) => {
 
 
-    router.get('/', (req, res) => {
+    app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
 
-    router.get('/notes', (req, res) => {
+    app.get('/notes', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/notes.html'));
     });
 
