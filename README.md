@@ -40,7 +40,7 @@ Click the link to use the app. Enter a note and press the save button to store t
 
 <a href="
 https://dry-thicket-38874.herokuapp.com/">
-https://dry-thicket-38874.herokuapp.com/</a>
+Click here to visit the deployed site!</a>
 <br><br>
 
 
