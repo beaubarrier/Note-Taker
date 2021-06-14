@@ -38,11 +38,11 @@ N/A
 
 Usage
 -----
-Click the link to use the app. Enter a note and press the save button. Click the pencil icon to create a new note.
+Click the link to use the app. Enter a note and press the save button to store the note. Click the pencil icon to create a new note.
 
 <a href="
-https://git.heroku.com/dry-thicket-38874.git">
-https://git.heroku.com/dry-thicket-38874.git</a>
+https://dry-thicket-38874.herokuapp.com/">
+https://dry-thicket-38874.herokuapp.com/</a>
 <br><br>
 
 
