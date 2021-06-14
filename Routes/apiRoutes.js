@@ -17,12 +17,12 @@ module.exports = (app) => {
     app.post('/api/notes', (req, res) => {
         fs.readFile(dbPath, "utf8", (err, data) => {
             if (err) { throw err; }
-            var mySavedNotes = JSON.parse(data)
+            var savedNotes = JSON.parse(data)
             var note = req.body;
             note.id = uniqid();
-            mySavedNotes.push(note);
+            savedNotes.push(note);
             res.json(true);
-            fs.writeFileSync("./db/db.json", JSON.stringify(mySavedNotes), err => {
+            fs.writeFileSync("./db/db.json", JSON.stringify(savedNotes), err => {
                 if (err) {
                     console.error(err)
                     return
@@ -37,7 +37,6 @@ module.exports = (app) => {
         let noteFilter = noteDelete.filter(function (e) {
             return e.id != id;
         });
-
         fs.writeFileSync("./db/db.json", JSON.stringify(noteFilter));
         res.json("Note deleted!");
     })
