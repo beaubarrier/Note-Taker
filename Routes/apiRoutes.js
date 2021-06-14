@@ -1,6 +1,7 @@
-const fs = require('fs');
-const path = require('path');
-const uniqid = require('uniqid');
+// Required modules
+const fs = require('fs'); // File System. Used for reading and writing to files.
+const path = require('path');// Path is used to 
+const uniqid = require('uniqid'); // Uniqid Module is used to assign id's to the individual notes
 const dbPath = path.join(__dirname, '../db/db.json');
 
 
