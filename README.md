@@ -25,9 +25,7 @@ Note taker is an app that uses express server to read and write notes.
 
 Required Modules
 ----------------
-- Express
-- Uniqid
-
+N/A
 
 <br><br>
 
