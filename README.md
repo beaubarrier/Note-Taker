@@ -1,8 +1,9 @@
+
 Note Taker
 =========================
 Welcome to my note taker app! 
 <br><br><br>
-{{screenshot}}
+<img width="1025" alt="Screen Shot 2021-06-13 at 6 00 50 PM" src="https://user-images.githubusercontent.com/78766978/121833929-52afcd80-cc82-11eb-909f-de9b8fe5831a.png">
 <br><br>
 
 Table of contents
