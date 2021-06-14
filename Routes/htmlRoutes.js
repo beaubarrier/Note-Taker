@@ -12,8 +12,8 @@ module.exports = (app) => {
     app.get('*', (req, res) => { // Hits this route if none other is specified.
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
-}
 };
+
 
 
 
